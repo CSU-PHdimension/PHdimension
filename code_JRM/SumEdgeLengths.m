@@ -1,15 +1,15 @@
 % Script for computing edge lengths from persistence intervals
 
 %% Settings. Edit these for different experiments.
-dir='pointsUnitCube/';   % Directory containing ripser output (include trailing 
+dir='UnitTriangle/';   % Directory containing ripser output (include trailing 
                     % / ).
 fname='Homology_';      % File naming convention.
 ftype='.txt';           % File type
-name='Unit Cube';       % Name of sampled object (for figure titles)
+name='Triangle with Area One';       % Name of sampled object (for figure titles)
 min=50;         % Minimum number of points sampled
 inc=50;         % Increment size in sampling
-max=1350;       % Maximum number of points sampled
-dimn = 1;       % Dimension of homology to look at.
+max=10000;       % Maximum number of points sampled
+dimn = 0;       % Dimension of homology to look at.
 
 %% Computations.
 % Loop through all the files and compute the sum of the edge lengths:
@@ -34,12 +34,12 @@ asyy = log10(c) + alpha*polyx;
 % Make plot of points and both fits
 figure;
 hold on;
-plot(polyx,polyy);
 plot(logpoints,logedges,'o');
+plot(polyx,polyy);
 plot(polyx,asyy);
 axis equal;
 grid on;
 title(['PH_',int2str(dimn),' for points from ',name]);
-xlabel('log_{10}(Number of points)');
-ylabel('log_{10}(Sum of edge lengths)');
+xlabel('log_{10}(N');
+ylabel('log_{10}(L^i(X_n))');
 legend(strcat('linear fit= ',num2str(p(1))),'data',strcat('asymptotic estimate=',num2str(alpha)));
