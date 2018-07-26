@@ -1,0 +1,5 @@
+*.swp
+code_JRM/CantorDust2D/*
+code_JRM/CantorDust3D/*
+code_JRM/CantorSetCrossInterval/*
+code_JRM/UnitTriangle/*
