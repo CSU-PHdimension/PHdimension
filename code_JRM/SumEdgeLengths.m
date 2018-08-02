@@ -1,14 +1,14 @@
 % Script for computing edge lengths from persistence intervals
 
 %% Settings. Edit these for different experiments.
-dir='CantorDust3D_katrina/';   % Directory containing ripser output (include trailing 
+dir='Computations/UnitCube/';   % Directory containing ripser output (include trailing 
                     % / ).
 fname='Homology_';      % File naming convention.
 ftype='.txt';           % File type
-name='Cantor Dust in R^3';       % Name of sampled object (for figure titles)
+name='Unit Cube';       % Name of sampled object (for figure titles)
 min=50;         % Minimum number of points sampled
 inc=50;         % Increment size in sampling
-max=3400;       % Maximum number of points sampled
+max=2250;       % Maximum number of points sampled
 dimn = 0;       % Dimension of homology to look at.
 
 %% Computations.
@@ -42,4 +42,4 @@ grid on;
 title(['PH_',int2str(dimn),' for points from ',name]);
 xlabel('log_{10}(N)');
 ylabel(['log_{10}(L^',int2str(dimn),'(X_n))']);
-legend(strcat('linear fit= ',num2str(p(1))),'data',strcat('asymptotic estimate=',num2str(alpha)));
+legend('data',strcat('linear fit = ',num2str(p(1))),strcat('asymptotic estimate = ',num2str(alpha)));
