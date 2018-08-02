@@ -4,11 +4,11 @@ function  functionValues = analyticPointsFromInterval(n)
 % length of the i-th longest barcode, below. This curve tends to -log(1-x),
 % if I remember correctly.
 % TODO: Add more detail to these comments!
+
 functionValues=zeros(n+1,1);
 functionValues(1)=1/((n+1)*(n+1));
 for k=1:n
     functionValues(k+1)=functionValues(k)+1/((n+1)*(n+1-k));
 end
-    
 
 %scatter(points(:,1),points(:,2),'.')
