@@ -1,1 +1,1 @@
-The code on this repository accompanies the paper "A fractal dimension for measures via persistent homology" by Henry Adams, Manuchehr Aminian, Elin Farnell, Michael Kirby, Chris Peterson, Joshua Mirth, Rachel Neville, Patrick Shipman, and Clayton Shonkwiler.
+The code on this repository accompanies the paper "A fractal dimension for measures via persistent homology" by Henry Adams, Manuchehr Aminian, Elin Farnell, Michael Kirby, Chris Peterson, Joshua Mirth, Rachel Neville, and Clayton Shonkwiler.
