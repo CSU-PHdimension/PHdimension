@@ -63,18 +63,24 @@ end
 n = length(xv);
 
 % Unfortunately there are still a few hard-coded parameters...
-minlen = 2^floor(log2(n*(2^-7)));    % smallest allowed number of points for a fit.
-minlen = min( max(minlen, 64), n);
 polyorder = 2;  % Polynomial order used for fitting alpha and c. 
                 % Should be low order (probably 3 at most).
+
+                
+
+% minlen = 2^floor(log2(n*(2^-7)));    % smallest allowed number of points for a fit.
+% minlen = min( max(minlen, 64), n);
 
 % Geometric sequence of start points for sequence fits.
 % Smallest subset is n-minlen+1:n; largest is 1:n. Scaling is done 
 % in powers of two times minlen until 1:n is reached.
-powmax = floor(log2(n/minlen));
-startpts = n-minlen*2.^(powmax:-1:0)+1;
+% powmax = floor(log2(n/minlen));
+% startpts = n-minlen*2.^(powmax:-1:0)+1;
 
-startpts = [1, startpts];
+% startpts = [1, startpts];
+
+startpts = 1:(n-polyorder-1);
+
 fitsc = zeros(size(startpts));
 fitsa = zeros(size(startpts));
 
